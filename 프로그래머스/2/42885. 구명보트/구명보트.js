@@ -7,12 +7,11 @@ function solution(people, limit) {
         
         const pop = sortPeople.pop();
         
-        if(pop+sortPeople[0] <= limit) {
+        if (sortPeople.length > 0 && pop + sortPeople[0] <= limit) {
             sortPeople.shift();
-            count++;
-        } else {
-            count++;
         }
+
+        count++;
         
     }
     return count
