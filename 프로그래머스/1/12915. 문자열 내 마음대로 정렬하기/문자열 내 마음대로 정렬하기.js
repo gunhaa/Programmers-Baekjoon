@@ -3,8 +3,6 @@ function solution(strings, n) {
     
     return strings.sort((a, b) => {
         
-        let temp = n;
-        
         let charA = a[n];
         let charB = b[n];
         
