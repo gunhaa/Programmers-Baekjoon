@@ -8,8 +8,6 @@ function solution(food) {
         
     });
 
-    // const len = useFood.reduce((acc,v) => acc+v ,0);
-    
     const answer = [0];
     
     for(let i=useFood.length-1 ; i>0; i--){
