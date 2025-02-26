@@ -1,0 +1,8 @@
+-- 코드를 입력하세요
+# select DATE_FORMAT(APNT_YMD, '%Y-%m') from appointment
+
+SELECT MCDP_CD AS 진료과코드, COUNT(AP.APNT_YMD) AS 5월예약건수
+FROM APPOINTMENT AS AP
+WHERE DATE_FORMAT(AP.APNT_YMD, '%Y-%m') = '2022-05'
+GROUP BY AP.MCDP_CD
+ORDER BY 5월예약건수 ASC, MCDP_CD ASC;
