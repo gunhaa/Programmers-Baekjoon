@@ -6,12 +6,15 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int L = Integer.parseInt(br.readLine());
         char[] str = br.readLine().toCharArray();
-        int power = 0;
-        int result = 0;
+
+        final int M = 1234567891;
+        long power = 1;
+        long result = 0;
         for (char c : str) {
-            double cur = (int) c - 96;
-            result += (int) (cur * (int) Math.pow(31, power++));
+            long cur = (long) c - 96;
+            result += cur*power;
+            power = (power * 31) % M;
         }
-        System.out.println(result);
+        System.out.println(result%M);
     }
 }
